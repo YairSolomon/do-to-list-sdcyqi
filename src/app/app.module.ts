@@ -10,10 +10,11 @@ import {ListComponent} from './List/List.component';
 import {MissionComponent} from './Mission/Mission.component';
 import {ListService } from './services/List.service';
 import { HttpClientModule } from '@angular/common/http';
+import {MissionSearchPipe} from './Pipe/mission-search.pipe';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,AppRouting,HttpClientModule],
-  declarations: [ AppComponent, HelloComponent,ListComponent,MissionComponent],
+  declarations: [ AppComponent, HelloComponent,ListComponent,MissionComponent,MissionSearchPipe],
   providers:[ListService],
   bootstrap:    [ AppComponent ]
 })

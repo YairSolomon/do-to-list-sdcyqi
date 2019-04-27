@@ -2,15 +2,18 @@
 	<div class="row">
 		<div class="offset-md-4 col-md-4">
 			<h1 class="title">My Todo</h1>
-			<button (click)="addTodo(value)">Add new Mission</button>
+			<button type="button" class="btn btn-info" (click)="addTodo(value)">Add new Mission</button>
       <input class="search" type="text" [(ngModel)]="value"  placeholder="Add new Mission">
+       <input class="search" type="text" [(ngModel)]="query"  placeholder="Search Mission">
 		</div>
 	</div>
   <ul class="list">
-    <li *ngFor="let mission of missions;let index=index">
+    <li *ngFor="let mission of missions | missionSearch:query;let index=index">
       <Mission [mission]="mission"></Mission>
       <!-- <span >Update </span> -->
-      <span (click)="removeTodo(mission._id,index)" class="delete">X </span>
+      <button type="button" class="btn btn-danger" (click)="removeTodo(mission._id,index)">Delete </button>
+      <!-- <button  class="btn btn-danger">Danger</button> -->
+
     </li>
   </ul>
 </div>
