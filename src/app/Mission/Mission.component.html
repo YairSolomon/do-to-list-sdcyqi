@@ -1,2 +1,4 @@
-<span ngClass="{done:mission.completed}">{{mission.name}}</span>
+<span  class="task pointer"
+[ngClass]="{done:mission.completed,notDone:!mission.completed}">
+{{mission.name}}</span>
   

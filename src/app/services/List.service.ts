@@ -21,7 +21,10 @@ export class ListService {
 
   addTodo(value:String){
     return this.http.post(this.todosApiUrl,{name:value})
-
   }
+
+  removeTodo(id:String){
+    return this.http.delete(this.todosApiUrl+"/" +id)
+    }
   
 }

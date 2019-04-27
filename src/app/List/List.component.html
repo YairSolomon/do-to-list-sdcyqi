@@ -7,13 +7,8 @@
 		</div>
 	</div>
   <ul class="list">
-<li *ngFor="let mission of missions;let i =index">
-  <Mission 
-    [mission]="mission"
-  ></Mission>
-  
-</li>
-
+    <li *ngFor="let mission of missions;let index=index" (click)="removeTodo(mission._id,index)">
+      <Mission [mission]="mission"></Mission>
+    </li>
   </ul>
-
 </div>

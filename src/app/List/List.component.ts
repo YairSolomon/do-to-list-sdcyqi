@@ -32,5 +32,11 @@ constructor(private listService:ListService){
           console.log(err)
         })
   }
+
+  removeTodo(id,index){
+    this.listService.removeTodo(id).subscribe(data=>{
+     this.missions.splice(index,1);
+    });
+  }
  
 }
