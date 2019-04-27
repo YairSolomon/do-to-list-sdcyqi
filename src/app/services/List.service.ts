@@ -26,5 +26,10 @@ export class ListService {
   removeTodo(id:String){
     return this.http.delete(this.todosApiUrl+"/" +id)
     }
+
+    changeStatus(id:String,completed:boolean){
+   
+      return this.http.put<Mission>(this.todosApiUrl+"/"+id,{completed:!completed});
+    }
   
 }

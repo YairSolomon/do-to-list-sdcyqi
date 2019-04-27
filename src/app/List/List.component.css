@@ -10,5 +10,16 @@
 	width: 800px;
 	margin: 0 auto;
 }
+ li .delete{
 
+   float: right;
+  color: #c0392b;
+  transition: all 0.3s;
+  opacity: 0;
 
+}
+
+li :hover{
+ opacity: 1;
+
+}

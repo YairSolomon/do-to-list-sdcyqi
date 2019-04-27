@@ -26,8 +26,9 @@ constructor(private listService:ListService){
   }
 
   addTodo(){
-        this.listService.addTodo(this.value).subscribe(data => {
+        this.listService.addTodo(this.value).subscribe((data:Mission) => {
           this.missions.push(data);
+          this.value='';
         },err =>{
           console.log(err)
         })

@@ -3,12 +3,14 @@
 		<div class="offset-md-4 col-md-4">
 			<h1 class="title">My Todo</h1>
 			<button (click)="addTodo(value)">Add new Mission</button>
-      <input class="search" type="text" [(ngModel)]="value"  placeholder="search for Mission">
+      <input class="search" type="text" [(ngModel)]="value"  placeholder="Add new Mission">
 		</div>
 	</div>
   <ul class="list">
-    <li *ngFor="let mission of missions;let index=index" (click)="removeTodo(mission._id,index)">
+    <li *ngFor="let mission of missions;let index=index">
       <Mission [mission]="mission"></Mission>
+      <!-- <span >Update </span> -->
+      <span (click)="removeTodo(mission._id,index)" class="delete">X </span>
     </li>
   </ul>
 </div>

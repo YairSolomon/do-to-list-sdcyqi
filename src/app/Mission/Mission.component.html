@@ -1,4 +1,5 @@
-<span  class="task pointer"
+<span  class="task pointer" (click)="updateMission(mission._id,mission.completed)"
 [ngClass]="{done:mission.completed,notDone:!mission.completed}">
-{{mission.name}}</span>
+{{mission.name}}
+</span>
   
