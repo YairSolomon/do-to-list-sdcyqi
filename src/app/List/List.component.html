@@ -1,13 +1,19 @@
-
 <div class="container">
 	<div class="row">
 		<div class="offset-md-4 col-md-4">
 			<h1 class="title">My Todo</h1>
-      <button (click)="addTodo(value)">Add new Mission</button>
+			<button (click)="addTodo(value)">Add new Mission</button>
       <input class="search" type="text" [(ngModel)]="value"  placeholder="search for Mission">
 		</div>
 	</div>
-  <Mission *ngFor="let mission of missions;let i =index" 
+  <ul class="list">
+<li *ngFor="let mission of missions;let i =index">
+  <Mission 
     [mission]="mission"
   ></Mission>
+  
+</li>
+
+  </ul>
+
 </div>

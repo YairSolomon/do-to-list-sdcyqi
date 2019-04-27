@@ -2,3 +2,8 @@
 	width: 800px;
 	margin: 0 auto;
 }
+
+.done {
+	text-decoration: line-through;
+	color: #bdc3c7;
+}
