@@ -20,6 +20,8 @@ export class MissionComponent implements OnInit  {
  updateMission(id:String,completed:boolean){
   this.listService.changeStatus(id,completed).subscribe((data:Mission) =>{
     this.mission=data;
+  },(err:Error) =>{
+    console.log(err)
   })
  }
 }
